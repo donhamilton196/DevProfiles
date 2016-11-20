@@ -1,0 +1,97 @@
+(setq load-path (append (list "~/elisp") load-path))
+
+(require 'web-mode)
+
+(autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+
+(setq csharp-want-imenu nil)
+
+(setq auto-mode-alist
+	  (append
+	   '(("CMakeLists\\.txt\\'" . cmake-mode))
+	   '(("\\.cmake\\'" . cmake-mode))
+	   auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
+
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(setq dabbrev-case-fold-search t)
+(setq dabbrev-case-replace t)
+
+(setq inhibit-startup-message t)
+(setq case-fold-search nil)
+(setq indent-tabs-mode nil)
+(setq visible-bell t)
+
+(tool-bar-mode 0)
+(menu-bar-mode 1)
+
+(setq frame-title-format "%b")
+(setq font-lock-verbose nil)
+
+(setq c-indent-level 4)
+
+(setq require-final-newline t)     ; Always add a newline character to file.
+
+(define-key esc-map   "="  'goto-line)
+(define-key esc-map   "?"  'what-line)
+
+(global-set-key (kbd "s-\\") 'recompile)
+(global-set-key (kbd "<f12>") 'recompile)
+
+(put 'kill-emacs 'disabled t)
+(put 'exit-emacs 'disabled t)
+(put 'suspend-emacs 'disabled t)
+(put 'save-buffers-kill-emacs 'disabled nil)
+(put 'eval-expression 'disabled nil)
+
+(defun line-to-top-of-window ()
+  "Move line cursor is on to top of window"
+  (interactive)
+  (save-excursion
+    (beginning-of-line)
+    (set-window-start (selected-window) (point))))
+
+(defun
+  kill-to-non-whitespace ()
+  "Kill whitespace between point and next non-whitespace character"
+  (interactive)
+  (save-excursion
+    (kill-region (point)
+		 (if (re-search-forward "[^ \t\n]" (point-max) (point-max)) (1- (point))
+		   (point-max)))
+    )
+  )
+
+(define-key esc-map "!"    'line-to-top-of-window)
+(define-key esc-map "\C-d" 'kill-to-non-whitespace)
+
+(global-set-key (kbd "s-\\") 'recompile)
+
+(if (eq system-type 'darwin)
+    (set-default-font
+     "-apple-Monaco-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes (quote (deeper-blue)))
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 143 :width normal)))))
