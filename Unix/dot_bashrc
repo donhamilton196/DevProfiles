@@ -121,23 +121,23 @@ fi
 #
 if [ -f ~/.bash_MyUbuntu ]; then
     . ~/.bash_MyUbuntu
-    alias e='/opt/emacs/bin/emacs'
-    export PATH="/opt/Qt5.6.0/5.6/gcc_64/bin:$PATH"
-    export PATH="/opt/thrift/bin:$PATH"
-    alias sandboxpath='export LD_LIBRARY_PATH="$MY_SANDBOX_THRIFT/lib:$MY_SANDBOX_OPENCV/lib:$MY_SANDBOX_PYLON/lib64:$LD_LIBRARY_PATH"'
-    export ANT_OPTS="-Dhttp.proxyHost=proxy.research.ge.com -Dhttp.proxyPort=8080"
-    export MY_SANDBOX_QT=/opt/Qt5.6.0/5.6/gcc_64
-    export MY_SANDBOX_OPENCV=/opt/cvlbase/INSTALL/OPENCV
-    export MY_SANDBOX_BOOST=/opt/cvlbase/INSTALL/BOOST
-    export MY_SANDBOX_VXL=/opt/cvlbase/INSTALL/VXL
-    export MY_SANDBOX_WX=/opt/cvlbase/INSTALL/wx
-    export MY_SANDBOX_GLFW=/opt/cvlbase/INSTALL/GLFW
-    export MY_SANDBOX_VTK=/opt/cvlbase/INSTALL/VTK
-    export MY_SANDBOX_ITK=/opt/cvlbase/INSTALL/ITK
-    export MY_SANDBOX_THRIFT=/opt/thrift
-    export MY_SANDBOX_PYLON=/opt/pylon5
-    export MY_SANDBOX_RABBITMQ=/opt/rabbitmq-java-client
-    cd ~
+    # alias e='/opt/emacs/bin/emacs'
+    # export PATH="/opt/Qt5.6.0/5.6/gcc_64/bin:$PATH"
+    # export PATH="/opt/thrift/bin:$PATH"
+    # alias sandboxpath='export LD_LIBRARY_PATH="$MY_SANDBOX_THRIFT/lib:$MY_SANDBOX_OPENCV/lib:$MY_SANDBOX_PYLON/lib64:$LD_LIBRARY_PATH"'
+    # export ANT_OPTS="-Dhttp.proxyHost=proxy.research.ge.com -Dhttp.proxyPort=8080"
+    # export MY_SANDBOX_QT=/opt/Qt5.6.0/5.6/gcc_64
+    # export MY_SANDBOX_OPENCV=/opt/cvlbase/INSTALL/OPENCV
+    # export MY_SANDBOX_BOOST=/opt/cvlbase/INSTALL/BOOST
+    # export MY_SANDBOX_VXL=/opt/cvlbase/INSTALL/VXL
+    # export MY_SANDBOX_WX=/opt/cvlbase/INSTALL/wx
+    # export MY_SANDBOX_GLFW=/opt/cvlbase/INSTALL/GLFW
+    # export MY_SANDBOX_VTK=/opt/cvlbase/INSTALL/VTK
+    # export MY_SANDBOX_ITK=/opt/cvlbase/INSTALL/ITK
+    # export MY_SANDBOX_THRIFT=/opt/thrift
+    # export MY_SANDBOX_PYLON=/opt/pylon5
+    # export MY_SANDBOX_RABBITMQ=/opt/rabbitmq-java-client
+    # cd ~
 fi
 
 #
