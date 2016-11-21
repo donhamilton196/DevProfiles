@@ -73,10 +73,19 @@
 (define-key esc-map "\C-d" 'kill-to-non-whitespace)
 
 (global-set-key (kbd "s-\\") 'recompile)
+(global-set-key (kbd "C-x C-b") 'buffer-menu)
+
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse 't)
+(setq scroll-step 1)
+
+(add-to-list 'default-frame-alist
+	     '(font . "-apple-Monaco-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1"))
 
 (if (eq system-type 'darwin)
     (set-default-font
-     "-apple-Monaco-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+     "-apple-Monaco-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 )
 
 (custom-set-variables
@@ -89,9 +98,9 @@
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 
-(custom-set-faces
+;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 143 :width normal)))))
+; '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 143 :width normal)))))
