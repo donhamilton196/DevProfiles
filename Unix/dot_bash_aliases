@@ -16,3 +16,4 @@ alias visbox='ssh -2 -l eyespy 3.1.220.117'
 alias gv1='ssh -2 -l don -i ~/.ssh/id_rsa gymvisionclimbing.com'
 
 alias gvc='docker run -d -p 80:8080 -v /Users/200007403/GvWorkShop/webapps niaquinto/jetty'
+alias vcam='vlc v4l:// :v4l-vdev="/dev/video0" :v4l-adev="/dev/audio2"'
