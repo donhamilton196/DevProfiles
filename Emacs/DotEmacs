@@ -80,12 +80,25 @@
 (setq mouse-wheel-follow-mouse 't)
 (setq scroll-step 1)
 
-(add-to-list 'default-frame-alist
-	     '(font . "-apple-Monaco-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1"))
 
 (if (eq system-type 'darwin)
     (set-default-font
      "-apple-Monaco-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+)
+
+(if (eq system-type 'darwin)
+    (add-to-list 'default-frame-alist
+		 '(font . "-apple-Monaco-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1"))
+)
+
+(if (eq system-type 'windows-nt)
+    (custom-set-faces
+     '(default ((t (:family "Tahoma" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
+)
+
+(if (eq system-type 'windows-nt)
+    (add-to-list 'default-frame-alist
+		 '(font . "-outline-Tahoma-normal-normal-normal-sans-16-*-*-*-p-*-iso8859-1"))
 )
 
 (custom-set-variables

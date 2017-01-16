@@ -113,7 +113,16 @@ fi
 if [ -f ~/.bash_MyDesktop ]; then
     . ~/.bash_MyDesktop
     [ ! -z "$M2_HOME" ] && export M2_HOME="/opt/maven"
-    cd ~
+    #cd ~
+fi
+
+#
+# My Win8 Desktop setup
+#
+if [ -f ~/.bash_MyWin8Desktop ]; then
+    . ~/.bash_MyWin8Desktop
+    alias sandboxpath='export PATH="`cd $MY_SANDBOX_OPENCV;pwd`/x64/vc12/bin:$PATH"'
+    #cd ~
 fi
 
 #
