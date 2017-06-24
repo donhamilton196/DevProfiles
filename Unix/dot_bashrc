@@ -133,6 +133,7 @@ if [ -f ~/.bash_MyUbuntu ]; then
     # export PATH="/opt/Qt5.6.0/5.6/gcc_64/bin:$PATH"
     # export PATH="/opt/thrift/bin:$PATH"
     # alias sandboxpath='export LD_LIBRARY_PATH="$MY_SANDBOX_THRIFT/lib:$MY_SANDBOX_OPENCV/lib:$MY_SANDBOX_PYLON/lib64:$LD_LIBRARY_PATH"'
+    #alias sb='cd ~/MyBbSandbox'
     # export ANT_OPTS="-Dhttp.proxyHost=proxy.research.ge.com -Dhttp.proxyPort=8080"
     # export MY_SANDBOX_QT=/opt/Qt5.6.0/5.6/gcc_64
     # export MY_SANDBOX_OPENCV=/opt/cvlbase/INSTALL/OPENCV
