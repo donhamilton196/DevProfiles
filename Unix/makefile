@@ -3,14 +3,14 @@ all:
 	@echo use 'make zhu' to pull envionment back into the sandbox
 
 install:
-	cp ~/.bashrc ~/.bashrc-backup
-	cp dot_bashrc ~/.bashrc
-	-cp ~/.bash_aliases ~/.bash_aliases-backup
-	cp dot_bash_aliases ~/.bash_aliases
-	cp ~/.profile ~/.profile-backup
-	cp dot_profile ~/.profile
+	-cp $(HOME)/.bashrc $(HOME)/.bashrc-backup
+	cp dot_bashrc $(HOME)/.bashrc
+	-cp $(HOME)/.bash_aliases $(HOME)/.bash_aliases-backup
+	cp dot_bash_aliases $(HOME)/.bash_aliases
+	-cp $(HOME)/.profile $(HOME)/.profile-backup
+	cp dot_profile $(HOME)/.profile
 
 zhu:
-	-cp ~/.bashrc dot_bashrc
-	-cp ~/.profile dot_profile
-	-cp ~/.bash_aliases dot_bash_aliases
+	-cp $(HOME)/.bashrc dot_bashrc
+	-cp $(HOME)/.profile dot_profile
+	-cp $(HOME)/.bash_aliases dot_bash_aliases
