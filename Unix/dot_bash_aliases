@@ -7,3 +7,15 @@ alias gv1='ssh -2 -l don -i ~/.ssh/id_rsa gymvisionclimbing.com'
 
 alias gvc='docker run -d -p 80:8080 -v /Users/200007403/GvWorkShop/webapps niaquinto/jetty'
 alias vcam='vlc v4l:// :v4l-vdev="/dev/video0" :v4l-adev="/dev/audio2"'
+
+alias rd='rd0;rd5;rd6;rd7;rd8'
+alias rd0='export GIT_SSH_COMMAND="ssh -i ~/.ssh/eyespy_gevxl_deployment_id_rsa" ; echo rd0: git@github.build.ge.com:GEVXL/GEVXL.git , using gevxl_deployment identity'
+alias rd5='export GIT_SSH_COMMAND="ssh -i ~/.ssh/eyespy_vxl_deployment_id_rsa" ; echo rd5: git@github.build.ge.com:Darpa-Sherlock-Platform/VXL.git , using vxl_deployment identity'
+alias rd6='export GIT_SSH_COMMAND="ssh -i ~/.ssh/eyespy_tf_model_deployment_id" ; echo rd6: using tf_model_deployment identity'
+alias rd7='export GIT_SSH_COMMAND="ssh -i ~/.ssh/eyespy_sherlockbuildtemplate_deployment_id" ; echo rd7: using sherlock_build_template_deployment identity'
+alias rd8='export GIT_SSH_COMMAND="ssh -i ~/.ssh/eyespy_gevaf_deployment_id" ; echo rd8: git@github.build.ge.com:GEVAF/gevaf.git , using gevaf_deployment identity'
+
+alias gv0='export GIT_SSH_COMMAND="ssh -i ~/.ssh/ez" ; echo gv0: git@github.com:donhamilton196/DevProfiles.git , using ez identity'
+alias gv1='export GIT_SSH_COMMAND="ssh -i ~/.ssh/ez" ; echo gv1: git@bitbucket.org:hamilton196/examplecode.git , using ez identity'
+alias gv2='export GIT_SSH_COMMAND="ssh -i ~/.ssh/ez" ; echo gv1: git@bitbucket.org:hamilton196/gymvisionapps.git , using ez identity'
+
