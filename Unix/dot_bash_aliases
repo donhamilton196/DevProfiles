@@ -1,18 +1,8 @@
 alias h=history
 alias m=less
 alias more=less
-alias tjdev='. ~/.targetjr ; cd $IUEROOT'
-alias lsdev='. ~/.lsdev ; cd $IUEROOT'
-alias vxldev='. ~/.vxldev ; cd $GEVXLROOT'
 alias ping_gopro='ping 10.5.5.9'
 
-alias cvl-analytics='ssh eyespy@3.1.220.117'
-alias cvl-bunker='ssh eyespy@3.1.190.39'
-alias dlink-211='ssh -2 eyespy@3.1.184.51'
-
-alias ivhm_d='ssh -l hamilton -i /cygdrive/c/users/hamilton/.ssh/identity 3.39.73.94'
-alias ivhm_b='ssh -l hamilton -i /cygdrive/c/users/hamilton/.ssh/identity 3.39.73.95'
-alias visbox='ssh -2 -l eyespy 3.1.220.117'
 alias gv1='ssh -2 -l don -i ~/.ssh/id_rsa gymvisionclimbing.com'
 
 alias gvc='docker run -d -p 80:8080 -v /Users/200007403/GvWorkShop/webapps niaquinto/jetty'
