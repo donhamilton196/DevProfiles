@@ -1,8 +1,10 @@
 (setq load-path (append (list "~/elisp") load-path))
 
 (require 'web-mode)
+(require 'clang-format)
 
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+(autoload 'cmake-mode "cmake-mode" "Major mode for editing cmake files." t)
 
 (setq csharp-want-imenu nil)
 
