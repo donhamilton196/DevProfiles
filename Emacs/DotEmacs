@@ -53,6 +53,9 @@
 (put 'save-buffers-kill-emacs 'disabled nil)
 (put 'eval-expression 'disabled nil)
 
+(add-to-list 'default-frame-alist '(height . 24))
+(add-to-list 'default-frame-alist '(width . 120))
+
 (defun line-to-top-of-window ()
   "Move line cursor is on to top of window"
   (interactive)
