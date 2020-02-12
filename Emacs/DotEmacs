@@ -37,7 +37,8 @@
 (setq frame-title-format "%b")
 (setq font-lock-verbose nil)
 
-(setq c-indent-level 4)
+(setq c-basic-offset 4)
+(setq compilation-ask-about-save nil)
 
 (setq require-final-newline t)     ; Always add a newline character to file.
 
