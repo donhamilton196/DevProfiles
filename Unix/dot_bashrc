@@ -101,6 +101,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_git_aliases ]; then
+    . ~/.bash_git_aliases
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -114,21 +118,29 @@ fi
 if [ -f ~/.bash_MyDesktop ]; then
     . ~/.bash_MyDesktop
     [ ! -z "$M2_HOME" ] && export M2_HOME="/opt/maven"
-    #cd ~
 fi
 
 #
-# My Win8 Desktop setup
+# Test for Windows Desktop setup
 #
-if [ -f ~/.bash_MyWin8Desktop ]; then
-    . ~/.bash_MyWin8Desktop
-    alias sandboxpath='export PATH="`cd $MY_SANDBOX_OPENCV;pwd`/x64/vc14/bin:$PATH"'
+if [ -f ~/.bash_MyWinDesktop ]; then
+    cd ~
+    . ~/.bash_MyWinDesktop
 fi
 
 #
-# My Ubuntu setup
+# My Win10 Desktop setup
+#
+if [ -f ~/.bash_MyWin10Desktop ]; then
+    cd ~
+    . ~/.bash_MyWin10Desktop
+fi
+
+#
+# Test for Ubuntu setup
 #
 if [ -f ~/.bash_MyUbuntu ]; then
+    cd ~
     . ~/.bash_MyUbuntu
     # alias e='/opt/emacs/bin/emacs'
     # export PATH="/opt/Qt5.6.0/5.6/gcc_64/bin:$PATH"
