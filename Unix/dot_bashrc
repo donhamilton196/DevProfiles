@@ -22,6 +22,10 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -32,7 +36,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -82,6 +86,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -142,6 +149,10 @@ fi
 if [ -f ~/.bash_MyUbuntu ]; then
     cd ~
     . ~/.bash_MyUbuntu
+    export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH
+    export PATH=/usr/local/cuda-11.7/bin:$PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH
     # alias e='/opt/emacs/bin/emacs'
     # export PATH="/opt/Qt5.6.0/5.6/gcc_64/bin:$PATH"
     # export PATH="/opt/thrift/bin:$PATH"
@@ -159,7 +170,6 @@ if [ -f ~/.bash_MyUbuntu ]; then
     # export MY_SANDBOX_THRIFT=/opt/thrift
     # export MY_SANDBOX_PYLON=/opt/pylon5
     # export MY_SANDBOX_RABBITMQ=/opt/rabbitmq-java-client
-    # cd ~
 fi
 
 #
@@ -175,31 +185,5 @@ if [ -f ~/.bash_MyMacBook ]; then
     export PATH="/usr/local/opt/bison/bin:$PATH"
     #export PATH="/Applications/CMake.app/Contents/bin:$PATH"
     export PATH="$PATH:/opt/qt/5.0.2/clang_64/bin"
-
-    ### Added by the Heroku Toolbelt
-    export PATH="/usr/local/heroku/bin:$PATH"
-
-    export ANT_HOME="/usr/local/ant"
-    export ANT_OPTS="-Dhttp.proxyHost=proxy.research.ge.com -Dhttp.proxyPort=8080"
-    export PATH="$PATH:/usr/local/ant/bin"
-    export PATH="/opt/apache-maven-3.3.9/bin:$PATH"
-    export M2_HOME="/opt/apache-maven-3.3.9"
-
-#    export PYTHONPATH=
-
-    export JAVA_HOME=$(/usr/libexec/java_home)
-
-    export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig"
-    export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/lib/pkgconfig"
-
-    export MY_SANDBOX_QT=/opt/qt/5.0.2/clang_64
-    export MY_SANDBOX_OPENCV=/opt/CVLBASE/INSTALL/OPENCV
-    export MY_SANDBOX_BOOST=/opt/CVLBASE/INSTALL/BOOST
-    export MY_SANDBOX_WX=/opt/wx
-    export MY_SANDBOX_GLFW=/opt/CVLBASE/INSTALL/GLFW
-    export MY_SANDBOX_THRIFT=/opt/CVLBASE/INSTALL/THRIFT
-    export MY_SANDBOX_VTK=/opt/CVLBASE/INSTALL/VTK
-    export MY_SANDBOX_ITK=/opt/CVLBASE/INSTALL/ITK
-
-    cd ~
 fi
+

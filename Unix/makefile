@@ -17,8 +17,8 @@ install:
 	touch ${HOME}/.profile ${HOME}/.profile-backup
 	-cp ${HOME}/.profile ${HOME}/.profile-backup
 	cp dot_profile ${HOME}/.profile
-	-mkdir ${HOME}/.config
-	-mkdir ${HOME}/.config/gtk-3.0
+	-mkdir -p ${HOME}/.config
+	-mkdir -p ${HOME}/.config/gtk-3.0
 	-touch ${HOME}/.config/gtk-3.0/gtk.css ${HOME}/.config/gtk-3.0/gtk.css-backup
 	-cp ${HOME}/.config/gtk-3.0/gtk.css ${HOME}/.config/gtk-3.0/gtk.css-backup
 	cp gtk.css ${HOME}/.config/gtk-3.0/gtk.css
