@@ -7,14 +7,15 @@ install:
 	touch ${HOME}/.bashrc ${HOME}/.bashrc-backup
 	-cp ~/.bashrc ${HOME}/.bashrc-backup
 	cp dot_bashrc ${HOME}/.bashrc
-	-cp ~/.bash_MyWinDesktop ${HOME}/.bash_MyWinDesktop-backup
+	-touch ${HOME}/.bash_MyWinDesktop ${HOME}/.bash_MyWinDesktop-backup
+	-cp ${HOME}/.bash_MyWinDesktop ${HOME}/.bash_MyWinDesktop-backup
 	cp dot_bash_MyWinDesktop ${HOME}/.bash_MyWinDesktop
-	touch ${HOME}/.bash_aliases ${HOME}/.bash_aliases-backup
+	-touch ${HOME}/.bash_aliases ${HOME}/.bash_aliases-backup
 	-cp ${HOME}/.bash_aliases ${HOME}/.bash_aliases-backup
 	cp dot_bash_aliases ${HOME}/.bash_aliases
 	-cp ${HOME}/.bash_git_aliases ${HOME}/.bash_git_aliases-backup
 	cp dot_bash_git_aliases ${HOME}/.bash_git_aliases
-	touch ${HOME}/.profile ${HOME}/.profile-backup
+	-touch ${HOME}/.profile ${HOME}/.profile-backup
 	-cp ${HOME}/.profile ${HOME}/.profile-backup
 	cp dot_profile ${HOME}/.profile
 	-mkdir -p ${HOME}/.config
