@@ -17,6 +17,9 @@ install:
 	touch ${HOME}/.profile ${HOME}/.profile-backup
 	-cp ${HOME}/.profile ${HOME}/.profile-backup
 	cp dot_profile ${HOME}/.profile
+	touch ${HOME}/.config/gtk-3.0/gtk.css ${HOME}/.config/gtk-3.0/gtk.css-backup
+	-cp ${HOME}/.config/gtk-3.0/gtk.css ${HOME}/.config/gtk-3.0/gtk.css-backup
+	cp gtk.css ${HOME}/.config/gtk-3.0/gtk.css
 
 zhu:
 	-cp ${HOME}/.bashrc dot_bashrc
@@ -24,3 +27,4 @@ zhu:
 	-cp ${HOME}/.bash_MyWinDesktop dot_bash_MyWinDesktop
 	-cp ${HOME}/.bash_aliases dot_bash_aliases
 	-cp ${HOME}/.bash_git_aliases dot_bash_git_aliases
+	-cp ${HOME}/.config/gtk-3.0/gtk.css gtk.css

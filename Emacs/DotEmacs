@@ -1,8 +1,10 @@
 (setq load-path (append (list "~/elisp") load-path))
 
 (require 'web-mode)
+(require 'clang-format)
 
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+(autoload 'cmake-mode "cmake-mode" "Major mode for editing cmake files." t)
 
 (setq csharp-want-imenu nil)
 
@@ -35,7 +37,8 @@
 (setq frame-title-format "%b")
 (setq font-lock-verbose nil)
 
-(setq c-indent-level 4)
+(setq c-basic-offset 4)
+(setq compilation-ask-about-save nil)
 
 (setq require-final-newline t)     ; Always add a newline character to file.
 
@@ -50,6 +53,9 @@
 (put 'suspend-emacs 'disabled t)
 (put 'save-buffers-kill-emacs 'disabled nil)
 (put 'eval-expression 'disabled nil)
+
+(add-to-list 'default-frame-alist '(height . 24))
+(add-to-list 'default-frame-alist '(width . 120))
 
 (defun line-to-top-of-window ()
   "Move line cursor is on to top of window"
