@@ -1,0 +1,30 @@
+alias sb="pushd /opt/sandboxbase"
+alias sbpath='export PATH="./:$PATH" ; export LD_LIBRARY_PATH="$MY_SANDBOX_ZMQ/lib:$MY_SANDBOX_CPP_PAHO/lib:$MY_SANDBOX_PAHO/lib:$MY_SANDBOX_OPENCV/lib:$MY_SANDBOX_VTK/lib:$LD_LIBRARY_PATH"'
+
+export MY_SANDBOX_FREEGLUT=/opt/sandboxbase/INSTALL/FREEGLUT
+export MY_SANDBOX_OPENCV=/opt/sandboxbase/INSTALL/OPENCV
+export MY_SANDBOX_BOOST=/opt/sandboxbase/INSTALL/BOOST/release
+export MY_SANDBOX_VXL=/opt/sandboxbase/INSTALL/VXL
+export MY_SANDBOX_VTK=/opt/sandboxbase/INSTALL/VTK
+export MY_SANDBOX_ITK=/opt/sandboxbase/INSTALL/ITK
+export MY_SANDBOX_GLFW=/opt/sandboxbase/INSTALL/GLFW
+export MY_SANDBOX_ZMQ=/opt/sandboxbase/INSTALL/ZMQ
+export MY_SANDBOX_CPPZMQ=/opt/sandboxbase/INSTALL/CPPZMQ
+export MY_SANDBOX_PAHO=/opt/sandboxbase/INSTALL/PAHO
+export MY_SANDBOX_CPP_PAHO=/opt/sandboxbase/INSTALL/CPP_PAHO
+export MY_SANDBOX_WX=/opt/sandboxbase/INSTALL/WXWIDGETS
+export MY_SANDBOX_CURL=/opt/sandboxbase/INSTALL/CURL
+export MY_SANDBOX_EIGEN=/opt/sandboxbase/INSTALL/EIGEN
+export MY_SANDBOX_GLM=/opt/sandboxbase/code/GLM
+# export MY_SANDBOX_QT=/opt/Qt5.6.0/5.6/gcc_64
+# export MY_SANDBOX_THRIFT=/opt/thrift
+# export MY_SANDBOX_PYLON=/opt/pylon5
+# export MY_SANDBOX_RABBITMQ=/opt/rabbitmq-java-client
+
+#export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH
+#export PATH=/usr/local/cuda-11.7/bin:$PATH
+#export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH
+# alias sandboxpath='export LD_LIBRARY_PATH="$MY_SANDBOX_THRIFT/lib:$MY_SANDBOX_OPENCV/lib:$MY_SANDBOX_PYLON/lib64:$LD_LIBRARY_PATH"'
+
+alias sbpath='export PATH="./:$PATH" ; export LD_LIBRARY_PATH="$MY_SANDBOX_ZMQ/lib:$MY_SANDBOX_CPP_PAHO/lib:$MY_SANDBOX_PAHO/lib:$MY_SANDBOX_OPENCV/lib:$MY_SANDBOX_VTK/lib:$LD_LIBRARY_PATH"'

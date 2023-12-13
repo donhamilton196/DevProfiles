@@ -28,6 +28,9 @@ zhu:
 	-cp ${HOME}/.bashrc dot_bashrc
 	-cp ${HOME}/.profile dot_profile
 	-cp ${HOME}/.bash_MyWinDesktop dot_bash_MyWinDesktop
+	-cp ${HOME}/.bash_MyUbuntu .bash_MyUbuntu
+	-cp ${HOME}/.bash_MyWin10Desktop .bash_MyWin10Desktop
+	-cp ${HOME}/.bash_MySANDBOX .bash_MySANDBOX
 	-cp ${HOME}/.bash_aliases dot_bash_aliases
 	-cp ${HOME}/.bash_git_aliases dot_bash_git_aliases
 	-cp ${HOME}/.config/gtk-3.0/gtk.css gtk.css

@@ -1,26 +1,20 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# see /usr/share/doc/bash/examples/startup-files
 
-# If not running interactively, don't do anything
+# do nothing when not interactive
 [ -z "$PS1" ] && return
 
 echo processing .bashrc
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
+# append to the history file. no duplicate lines in the history
+shopt -s histappend checkwinsize
 HISTCONTROL=ignoredups:ignorespace
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+#shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -78,7 +72,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+#    alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -99,10 +93,15 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# See /usr/share/doc/bash-doc/examples
+
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+if [ -f ~/.bash_MyDesktop ]; then
+    . ~/.bash_MyDesktop
+fi
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -112,69 +111,22 @@ if [ -f ~/.bash_git_aliases ]; then
     . ~/.bash_git_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-#
-# My Windows7 setup
-#
-if [ -f ~/.bash_MyDesktop ]; then
-    . ~/.bash_MyDesktop
-    [ ! -z "$M2_HOME" ] && export M2_HOME="/opt/maven"
-fi
-
-#
-# Test for Windows Desktop setup
-#
 if [ -f ~/.bash_MyWinDesktop ]; then
-    cd ~
     . ~/.bash_MyWinDesktop
 fi
 
-#
-# My Win10 Desktop setup
-#
 if [ -f ~/.bash_MyWin10Desktop ]; then
-    cd ~
     . ~/.bash_MyWin10Desktop
 fi
 
-#
-# Test for Ubuntu setup
-#
 if [ -f ~/.bash_MyUbuntu ]; then
-    cd ~
     . ~/.bash_MyUbuntu
-    export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
-    export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH
-    export PATH=/usr/local/cuda-11.7/bin:$PATH
-    export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH
-    # alias e='/opt/emacs/bin/emacs'
-    # export PATH="/opt/Qt5.6.0/5.6/gcc_64/bin:$PATH"
-    # export PATH="/opt/thrift/bin:$PATH"
-    # alias sandboxpath='export LD_LIBRARY_PATH="$MY_SANDBOX_THRIFT/lib:$MY_SANDBOX_OPENCV/lib:$MY_SANDBOX_PYLON/lib64:$LD_LIBRARY_PATH"'
-    #alias sb='cd ~/MyBbSandbox'
-    # export ANT_OPTS="-Dhttp.proxyHost=proxy.research.ge.com -Dhttp.proxyPort=8080"
-    # export MY_SANDBOX_QT=/opt/Qt5.6.0/5.6/gcc_64
-    # export MY_SANDBOX_OPENCV=/opt/cvlbase/INSTALL/OPENCV
-    # export MY_SANDBOX_BOOST=/opt/cvlbase/INSTALL/BOOST
-    # export MY_SANDBOX_VXL=/opt/cvlbase/INSTALL/VXL
-    # export MY_SANDBOX_WX=/opt/cvlbase/INSTALL/wx
-    # export MY_SANDBOX_GLFW=/opt/cvlbase/INSTALL/GLFW
-    # export MY_SANDBOX_VTK=/opt/cvlbase/INSTALL/VTK
-    # export MY_SANDBOX_ITK=/opt/cvlbase/INSTALL/ITK
-    # export MY_SANDBOX_THRIFT=/opt/thrift
-    # export MY_SANDBOX_PYLON=/opt/pylon5
-    # export MY_SANDBOX_RABBITMQ=/opt/rabbitmq-java-client
 fi
 
-#
-# My MacOS setup
-#
+if [ -f ~/.bash_MySANDBOX ]; then
+    . ~/.bash_MySANDBOX
+fi
+
 if [ -f ~/.bash_MyMacBook ]; then
     . ~/.bash_MyMacBook
     alias sandboxpath='export DYLD_LIBRARY_PATH="$MY_SANDBOX_OPENCV/lib:$DYLD_LIBRARY_PATH"'
