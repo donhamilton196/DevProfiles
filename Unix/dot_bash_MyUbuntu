@@ -1,0 +1,12 @@
+alias e='emacs'
+alias photon='/opt/eclipse/java-photon/eclipse/eclipse'
+alias gv="pushd /home/eyespy/Projects/gv"
+
+#export PATH="$PATH:/home/eyespy/.local/bin"
+
+#alias imagej='export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64; /usr/bin/imagej'
+
+#alias workonstuff='export WORKON_HOME=$HOME/.virtualenvs ; export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 ; source /usr/local/bin/virtualenvwrapper.sh'
+#export WORKON_HOME=$HOME/.virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source /usr/local/bin/virtualenvwrapper.sh
