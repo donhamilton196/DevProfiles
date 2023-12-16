@@ -1,0 +1,14 @@
+[cola]
+	spellcheck = false
+	fontdiff = Ubuntu,8,-1,5,50,0,0,0,0,0
+	theme = flat-dark-grey
+	icontheme = dark
+	hidpi = 1
+	statusshowtotals = true
+	boldheaders = true
+	startupmode = list
+[user]
+	name = don
+	email = donhamilton196@gmail.com
+[gui]
+	editor = gedit
