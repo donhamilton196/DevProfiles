@@ -1,0 +1,3 @@
+alias sandboxpath='export PATH="`cd $MY_SANDBOX_OPENCV;pwd`/x64/vc16/bin:$PATH"'
+alias sb="cd ${HOME}/SANDBOXBASE"
+alias gv="cd ${HOME}/GvCode"
