@@ -3,7 +3,7 @@ all:
 	@echo use 'make install' to push sandbox into your environment
 	@echo use 'make install-MyUbuntu' to push platform dependent sandbox into your environment
 	@echo use 'make install-MyWinDesktop' to push platform dependent sandbox into your environment
-	@echo use 'make zhu' to pull envionment back into the sandbox
+	@echo use 'make ns' to pull envionment back into the sandbox
 
 install: dot_profile dot_bashrc dot_bash_aliases dot_bash_git_aliases dot_gitconfig gtk.css
 
@@ -49,7 +49,7 @@ gtk.css:
 	-cp ${HOME}/.config/gtk-3.0/gtk.css ${HOME}/.config/gtk-3.0/gtk.css-backup
 	cp gtk.css ${HOME}/.config/gtk-3.0/gtk.css
 
-zhu:
+ns:
 	-cp ${HOME}/.bashrc dot_bashrc
 	-cp ${HOME}/.profile dot_profile
 	-cp ${HOME}/.bash_MyWinDesktop dot_bash_MyWinDesktop
